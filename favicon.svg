@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="gradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E7D4E" />
+      <stop offset="100%" stop-color="#1B4D30" />
+    </linearGradient>
+    <linearGradient id="gradPage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F0" />
+      <stop offset="100%" stop-color="#EBE3D3" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#gradBg)" />
+  <!-- Book spine & pages -->
+  <path d="M14 18 C14 15, 17 14, 20 14 L30 16 C31 16.2, 32 17, 32 18 L32 48 C32 47, 31 46.2, 30 46 L20 44 C16 43.5, 14 45, 14 47 Z" fill="url(#gradPage)" />
+  <path d="M50 18 C50 15, 47 14, 44 14 L34 16 C33 16.2, 32 17, 32 18 L32 48 C32 47, 33 46.2, 34 46 L44 44 C48 43.5, 50 45, 50 47 Z" fill="#FFFFFF" />
+  <!-- Spine center line -->
+  <line x1="32" y1="17" x2="32" y2="48" stroke="#B9834A" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Page line accents -->
+  <line x1="19" y1="23" x2="27" y2="24.5" stroke="#2E7D4E" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7" />
+  <line x1="19" y1="28" x2="27" y2="29.5" stroke="#2E7D4E" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7" />
+  <line x1="19" y1="33" x2="25" y2="34.5" stroke="#2E7D4E" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7" />
+  <line x1="37" y1="24.5" x2="45" y2="23" stroke="#2E7D4E" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7" />
+  <line x1="37" y1="29.5" x2="45" y2="28" stroke="#2E7D4E" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7" />
+  <line x1="37" y1="34.5" x2="43" y2="33" stroke="#2E7D4E" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7" />
+  <!-- Bookmark ribbon -->
+  <path d="M42 14 L42 27 L45 25 L48 27 L48 14 Z" fill="#D97706" />
+</svg>

@@ -78,7 +78,7 @@
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载 APK (v2.22)
+              下载 APK (v2.26)
             </a>
             <a href="https://github.com/stormsnow2233/slim" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -580,15 +580,15 @@
           <div class="download-badge">开源免费 · 纯净无广告</div>
           <h2 class="download-title">下载拾卷</h2>
           <p class="download-desc">
-            最新版本 <strong>拾卷 v2.22 (Build 42)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
+            最新版本 <strong>拾卷 v2.26 (Build 46)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
           </p>
 
           <div class="download-buttons">
-            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.22/Shijuan-v2.22.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.22.apk">
+            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.26/Shijuan-v2.26.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.26.apk">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载安装包 APK (Shijuan-v2.22.apk)
+              下载安装包 APK (Shijuan-v2.26.apk)
             </a>
             <a href="https://github.com/stormsnow2233/slim/releases" target="_blank" rel="noopener" class="btn btn-secondary btn-xl">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -607,11 +607,11 @@
               </div>
               <div class="meta-row">
                 <span class="meta-label">版本号:</span>
-                <span>v2.22 (Build 42)</span>
+                <span>v2.26 (Build 46)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">文件大小:</span>
-                <span>约 11.3 MB</span>
+                <span>约 11.4 MB</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">系统支持:</span>
@@ -627,23 +627,23 @@
               </div>
               <div class="hash-container">
                 <span class="meta-label">SHA-256:</span>
-                <span class="hash-code">ca627dd12cd369a019d9e1d845c1abd9585053a0bf7ebae6be1569c736904d1f</span>
+                <span class="hash-code">3f43446c1fa041f723592bdb218c068b6c3e53e1224ff3d4093bd0597c07a5f1</span>
                 <button class="copy-btn" type="button" aria-label="复制 SHA-256 校验和">复制哈希</button>
               </div>
             </div>
 
-            <!-- v2.22 近期更新亮点 -->
+            <!-- v2.26 近期更新亮点 -->
             <div class="changelog-box">
               <div class="changelog-title">
-                <span class="changelog-tag">v2.22 最新版本</span>
-                <span class="changelog-date">2026-11 稳定版</span>
+                <span class="changelog-tag">v2.26 最新版本</span>
+                <span class="changelog-date">2026-11 核心网络引擎与正文缓存重构</span>
               </div>
               <ul class="changelog-list">
-                <li><strong>轻小说文库 (Wenku8) Cloudflare 安全质询与 WebView 传输通道：</strong> 精准识别 Cloudflare 5秒盾、Turnstile、JS 质询与 403 拦截，杜绝机械重试；支持直接在应用内唤出真实浏览器内核完成人机验证与官网登录，自动提取 <code>cf_clearance</code> 与会话 Session 注入网络层 CookieJar 并持久化到本地。</li>
-                <li><strong>拷贝漫画官方 v3 动态线路发现：</strong> 引入 <code>/api/v3/system/network2</code> 动态线路发现与多备用镜像机制（<code>api.mangacopy.com</code>、<code>api.copymanga.tv</code>、<code>api.copymanga.site</code> 等），智能记忆可用节点，搜索超时放宽至 8 秒并纠正误拉黑。</li>
-                <li><strong>18 个书源状态精细化治理与域名级并发限频：</strong> 确立「正常 / 访问受限 / 需要登录 / 站点异常 / 规则失效 / 未验证」六态细分状态机并在卡片直观呈现；网络层内置域名级强制限频（文库8 5000ms、SF 800ms），彻底防止并发轰炸导致封禁。</li>
-                <li><strong>分层健康体检与智能熔断保护：</strong> 深度断言「搜索 → 目录 → 正文」三阶段链路质量，仅在连续 3 次遭遇致命网关故障时触发临时避让；栗子漫画状态透明化说明。</li>
-                <li><strong>签名配置安全加固与解耦：</strong> 彻底将签名密钥从公开版本库索引中移除并加入 <code>.gitignore</code>，支持从系统环境变量或 <code>local.properties</code> 安全解耦注入签名参数。</li>
+                <li><strong>P0 安全加固与凭据硬件加密：</strong> 彻底消除轻小说文库硬编码账号、密码与共享 Cookie 隐患，新建 <code>SecureStore</code> 基于 Android Keystore 硬件密钥实现 AES-GCM-256 加密隔离；精准识别 Cloudflare 浏览器质询与会话失效，杜绝 403 自动恶性死循环。</li>
+                <li><strong>核心网络引擎重构与底层请求取消：</strong> 支持 OkHttp <code>Call.cancel()</code> 与后台线程池任务级底层联动取消；多镜像遍历共享单源统一 Deadline 预算（常规源 12s / SF 慢源 20s），超时提前退出；建立搜索、正文与预取三级有界独立线程池隔离调度；引入 <code>DomainRateLimiter</code> 统一 Token Bucket 令牌桶平滑限流。</li>
+                <li><strong>小说目录多页自动提取与正文两级缓存（L1+L2）：</strong> <code>TocRule</code> 支持 <code>nextPage</code> 选择器与 <code>{page}</code> 模板多页自动提取（最多 50 页防环去重）；构建内存 LRU（50章）+ 磁盘文件（24h TTL、150MB 上限超额淘汰至 120MB）两级缓存体系，严格校验内容合法性，杜绝转码错误与伪正文入库。</li>
+                <li><strong>书源健康度与历史指标体系升级：</strong> 记录请求总数、成功率（细分搜索/目录/正文）与状态码，统一 1m/5m/30m/2h/24h 指数退避降权阶梯；重做书源探针机制，深入抽查目录与多章节正文，书源管理界面直观展示历史成功率与健康状态。</li>
+                <li><strong>自定义书源订阅防护与漫画优化：</strong> 自定义书源全字段 JSON 无损往返序列化；支持在线书源订阅导入与恶意脚本注入防护；漫画多源搜索共享 8 秒总 Deadline，结果按书名、作者与路径复合 Key 精确去重。</li>
               </ul>
             </div>
           </div>
@@ -657,7 +657,7 @@
     <div class="liquid-capsule">
       <div class="capsule-info">
         <span class="capsule-title">拾卷 Shijuan</span>
-        <span class="capsule-sub">v2.21 稳定版 · 纯原生阅读</span>
+        <span class="capsule-sub">v2.26 最新版 · 纯原生阅读</span>
       </div>
       <a href="#download" class="btn btn-primary btn-sm">立即下载</a>
     </div>

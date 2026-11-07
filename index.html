@@ -516,67 +516,67 @@
         <div class="section-header">
           <span class="section-tag">FAQ</span>
           <h2 class="section-title">常见问题解答</h2>
-          <p class="section-desc">关于书源、排版体验、网络代理与使用技巧的常见疑问</p>
+          <p class="section-desc">大家常问的书源、轻小说文库防拦机制与日常阅读技巧</p>
         </div>
 
         <div class="faq-container">
           <details class="faq-item" name="faq" open>
             <summary class="faq-question">
-              <span>1. 和原来的轻小说文库（Wenku8）App 有什么关系？</span>
+              <span>1. 轻小说文库（Wenku8）总报登录、限频或搜不出书怎么办？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>官方旧版文库 App 多年未维护，在新系统上闪退断网较多。拾卷最初是由文库老读者用现代安卓原生技术重写的开源客户端，保留了大家习惯的绿色护眼主题，同时扩展了 ESJ Zone、SF 轻小说、飞卢等多书源聚合搜索，并补齐了日轻插图混排与整本离线导出。</p>
+              <p>文库源站现在加了强力防护（未登录直接 302 重定向到登录页，而且有 5 秒搜索冷却限制）。拾卷直接内置了解压仅 113KB 的文库全量日轻索引数据库（涵盖建站至今 4,379 部出版日轻），搜索时毫秒级本地命中，直接绕过登录限制和 5 秒限频，目录、章节与高清插图全部秒开直读。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>2. 遇到部分书源搜不到书或连不上怎么办？</span>
+              <span>2. 除了爽文网文，怎么多看真正的二次元轻小说和日轻翻译？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>可以在「设置 -> 书源管理」里查看各书源的实时连通状态与成功率。如果遇到部分海外站点或漫画源连接超时，在「设置 -> 网络设置」里填入本机代理地址（如 <code>127.0.0.1:7890</code>）即可直连，也支持直接导入阅读（Legado）格式的自定义书源规则。</p>
+              <p>在「书源管理」里我们专门划分了轻小说专区并默认开启：<strong>轻小说文库</strong>（4300+ 经典日轻文库版与原版插图）、<strong>轻小说百科（LNovel）</strong>（同步动漫之家轻小说数据库，正版文库排版）、<strong>ESJ Zone</strong>（海量日轻 Web 生肉与民间汉化组首发短篇）、<strong>SF 轻小说</strong>（二次元轻小说与原创国轻）。不用再在泛滥的赘婿战神文里翻找。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>3. 为什么做原生排版，不用网页套壳（WebView）？</span>
+              <span>3. 有的书源连不上或者加载超时怎么处理？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>很多阅读器直接拿网页套壳做翻页，几十万字的长篇很容易掉帧发热甚至被系统杀后台。拾卷采用安卓原生的文字渲染引擎逐行算好分页，翻页干脆跟手，支持左右滑动、垂直滚动、双击自动切章与音量键翻页，长时间看书更省电流畅。</p>
+              <p>部分站点的服务器部署在境外，遇到国内网络抖动时可能超时。可以在「设置 -> 网络设置」里直接填入本机的代理端口（例如 <code>127.0.0.1:7890</code>），小说和漫画都会自动走代理通道。另外也可以在书源管理中一键导入开源「阅读」Legado 格式的自定义书源规则。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>4. 导出的 EPUB 可以在微信读书、Kindle 等设备上看吗？</span>
+              <span>4. 导出的书籍能在微信读书、Kindle 或墨水屏上看吗？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>可以。拾卷导出的 EPUB 文件遵循标准规范，自动打包高清封面、简介、分卷及章节双层目录与日轻插图。导出后可直接分享至微信读书、Apple Books，或通过 USB 与邮件传给 Kindle、文石等各类墨水屏电纸书设备。</p>
+              <p>完全可以。导出的 EPUB 严格遵循标准电子书规范，自动打包高清封面、卷章层级与插画，微信读书、Apple Books 点开就能读；导出的 TXT 预置了 UTF-8 编码与标准分段，拷进 Kindle、文石或掌阅设备不会出现乱码或段落粘连。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>5. 怎么离线看书？缓存会一直占手机空间吗？</span>
+              <span>5. 离线缓存会偷偷占手机空间吗？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>看过的章节或在书籍详情页点击「整本下载」后，内容都会保存在本地，断网或飞行模式下可直接阅读。应用内置了内存与磁盘两级 LRU 淘汰机制，也可以随时在「设置 -> 缓存管理」中查看占用并一键清理，不会产生残留垃圾。</p>
+              <p>不会。看过的章节和下载整本都会存入本地二级缓存，坐地铁或飞行模式随时看。在「设置 -> 缓存管理」里可以精确看到每本书占用了几兆空间，看完随手点清理就能完全删掉，没有任何隐藏残留。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>6. 漫画模式怎么开启？</span>
+              <span>6. 漫画模式怎么用？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>点击左上角图标展开侧边栏，顶部第一项就是「小说模式 / 漫画模式」一键切换按钮。漫画阅读器支持双击缩放、横竖屏自适应、页码进度拖动与跨章节连续浏览。</p>
+              <p>拉开左侧抽屉，最上方就是「小说 / 漫画」切换开关。漫画阅读器支持左右翻页与上下卷轴、双击局部放大、自动记忆最后看过的页码，底部进度条拖动也很跟手。</p>
             </div>
           </details>
         </div>
@@ -621,7 +621,7 @@
               </div>
               <div class="meta-row">
                 <span class="meta-label">文件大小:</span>
-                <span>约 11.4 MB</span>
+                <span>约 11.5 MB</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">系统支持:</span>
@@ -637,7 +637,7 @@
               </div>
               <div class="hash-container">
                 <span class="meta-label">SHA-256:</span>
-                <span class="hash-code">2b7153100ea277e457fc8a6f389d7e4c0cba8c1ec340925ef5d738cf00c330a1</span>
+                <span class="hash-code">1226bf917d6a8f302ca75f974f438df37cf86dab076095a8f64c910382256a0b</span>
                 <button class="copy-btn" type="button" aria-label="复制 SHA-256 校验和">复制哈希</button>
               </div>
             </div>
@@ -646,13 +646,14 @@
             <div class="changelog-box">
               <div class="changelog-title">
                 <span class="changelog-tag">v2.29 最新版本</span>
-                <span class="changelog-date">2026-11 侧边栏导航精简、接入 GitHub 开源书源与预置书源大清洗</span>
+                <span class="changelog-date">2026-11 轻小说文库全量索引引擎、轻小说百科与日轻专区全面升级</span>
               </div>
               <ul class="changelog-list">
-                <li><strong>侧边栏抽屉精简：</strong> 移除了抽屉中与设置页重复的「书源管理」和「网络」入口，保持左侧栏纯粹干练，专注模式切换、缓存与核心设置。</li>
-                <li><strong>接入 GitHub 开源阅读书源（ESJ Zone 与书趣阁）：</strong> 接入知名日轻生肉翻译平台 <code>ESJ Zone</code>（支持标签检索、分卷目录与论坛正文提取）与老牌长效综合书源 <code>书趣阁</code>（毫秒级检索、完整目录解析）；扩充笔趣书阁备用镜像池（<code>biquge.site</code>、<code>biqun.cc</code>）。</li>
-                <li><strong>预置书源大清洗与死链剔除：</strong> 彻底剔除网关超时 504 的笔趣阁5200、403/404的铅笔与哔哩轻小说、连接超时的顶点小说与 Z-Library 等失效备用源；清理文库与 ESJ 的死链镜像。</li>
-                <li><strong>预置全量源 100% 实测连通保证：</strong> 保留的 8 大预置源（笔趣阁、速读谷、书趣阁、17K、文库、SF、飞卢、ESJ Zone）全部经过端到端链路自动化测试验证通过。</li>
+                <li><strong>轻小说文库（Wenku8）全量离线索引引擎：</strong> 内置全站从建站至今 4,379 部出版日轻全量索引数据库（仅 113KB，毫秒级解压匹配）。彻底突破源站强加的 302 登录重定向与 5 秒限频封锁，免登录直连正文、目录与插图。</li>
+                <li><strong>新增轻小说百科源（LNovel）：</strong> 接入全量同步动漫之家轻小说数据库的轻小说百科源（<code>lnovel.org</code> / <code>lnovel.tw</code>），正版日本轻小说文库版与高清原版插画免登录全通。</li>
+                <li><strong>日轻 Web 汉化社区与国轻体验优化：</strong> 针对 <code>ESJ Zone</code> 优化短篇生肉汉化与首发章节正文提取，接入备用镜像 <code>esjzone.cc</code> 并支持智能下架识别；优化 <code>SF 轻小说</code> 人设与插图纯图片章节过滤及 VIP 章节识别。</li>
+                <li><strong>书源结构去重降噪：</strong> 弱化同质化网文爽文，将二次元日轻、Web 汉化、同人轻小说与高质量出版综合书源重组为清晰的核心书库。</li>
+                <li><strong>侧边栏与交互体验精简：</strong> 移除侧边栏与设置页重复的冗余入口，纯粹聚焦核心阅读与模式切换。</li>
               </ul>
             </div>
           </div>

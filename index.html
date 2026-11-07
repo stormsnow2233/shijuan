@@ -78,7 +78,7 @@
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载 APK (v2.30)
+              下载 APK (v2.31)
             </a>
             <a href="https://github.com/stormsnow2233/slim" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -338,7 +338,7 @@
                 <span>兼容「阅读」规则 · 本地代理填空 · 不怕封锁</span>
               </div>
               <p class="card-intro">
-                除了内置书源，还支持导入常见的自定义书源规则。部分书源如果被网络防火墙拦截，在侧栏「网络」里填上 Clash 本地代理（127.0.0.1:7890）就能直接直连。
+                除了内置书源，还支持导入常见的自定义书源规则。部分书源如果被网络防火墙拦截，在「设置 -> 网络」里填上 Clash 本地代理（127.0.0.1:7890）就能直接直连。
               </p>
               <div class="card-tags">
                 <span class="tag">导入书源</span>
@@ -522,61 +522,61 @@
         <div class="faq-container">
           <details class="faq-item" name="faq" open>
             <summary class="faq-question">
-              <span>1. 文库8（Wenku8）经常搜不出书或者提示登录？</span>
+              <span>1. 本地下载的小说/漫画（TXT、EPUB、PDF）怎么导入看？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>文库8源站现在开了防爬和限频，经常搜不出来或重定向到登录页。我们在安装包里直接打包了文库全量索引（4000 多本日轻都有），搜书名秒出，点进去看目录正文和原版插图都不受影响。</p>
+              <p>打开拾卷，首页默认就是综合书架。直接点右下角的「+ 导入书籍」悬浮按钮，选手机里的 .txt、.epub 或 .pdf 文件即可。TXT 会自动按目录分章分卷；纯图漫画 EPUB 自动收纳进下半区的漫画书架；带插图的轻小说在阅读器里原生排版图文并茂，无需转码或格式转换。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>2. 怎么多搜日轻或者民间汉化翻译？</span>
+              <span>2. 遇到没识别出来的文件会怎么样？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>预置了文库8、轻小说百科（LNovel）、ESJ Zone 和 SF轻小说。搜《败犬女主》《邻家天使》《古见同学》等能智能匹配常用译名与别名，找 Web 生肉汉化或短篇首发直接切 ESJ 看就行。</p>
+              <p>如果是图文并茂的混合文件或 PDF，导入时会自动弹出提示框，让你自由选「导入为小说」还是「导入为漫画」。选小说就按图文段落逐屏排版，选漫画就按全彩卷轴或高清分页画册浏览，随时可以在书架长按管理。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>3. 有些书源打不开或者加载超时？</span>
+              <span>3. 文库8（Wenku8）老是提示登录或者搜不出书？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>部分站点的服务器部署在境外，遇到网络波动可能会连不上。可以在「设置 -> 网络」里填入本地代理（比如 Clash 的 <code>127.0.0.1:7890</code> 端口）。另外书源页面也支持一键导入开源「阅读」Legado 格式的自定义书源规则。</p>
+              <p>文库8官方源加了较强的防爬与频率限制，直接搜容易跳登录或超时。拾卷直接内置了全站 4,379 部出版日轻离线索引，搜《败犬女主》《古见同学》《邻家天使》书名秒出，点进目录、正文和高清插图直连畅读。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>4. 导出的书籍支持哪些阅读设备？</span>
+              <span>4. 漫画看一半换章节，为什么老是从最后一页开始？现在修了吗？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>导出的 EPUB 带高清封面、插图与卷章目录，微信读书、Apple Books、Kobo 都能直接看；TXT 统一采用 UTF-8 编码与标准分段，拷进 Kindle、文石或掌阅等墨水屏设备不会出现乱码或段落粘连。</p>
+              <p>这个翻页残留问题在 v2.31 已经彻底修好了！跨章节切换时会严格重置到第 1 页开始；底部进度条拖动定位更精准；同时针对弱网环境增加了自动重试，图片偶发加载失败会自动静默重试 2 次，不用每次手动狂按重试。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>5. 缓存怎么清理，占不占地方？</span>
+              <span>5. 有些境外书源或漫画图片加载慢怎么办？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>在「侧边栏 -> 缓存管理」能清晰看到每本书和漫画存了多少 MB，看完了随手点清理就能完全删掉，不留任何隐藏临时文件。</p>
+              <p>部分源站服务器在海外，国内直连容易丢包。可以在客户端「设置 -> 网络」里填入本地代理（比如 Clash 默认的 127.0.0.1:7890 端口）。另外书源支持一键开关体检，也可以随时导入开源「阅读」Legado 规则。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>6. 漫画翻页和换源怎么操作？</span>
+              <span>6. 离线缓存占手机空间怎么清理？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>拉开左侧抽屉，点「漫画」即可切换。支持左右翻页与上下卷轴、双击放大局部、自动记住上次看到的页码，底部进度条拖动也很跟手，已经剔除了失效源，聚合搜索更流畅。</p>
+              <p>滑出左侧边栏点「缓存管理」，里面每本小说和漫画占用了多少 MB 空间都有清晰明细，看完的书随手点「清除缓存」就会彻底删除本地图片和章节文件，完全不留隐藏垃圾。</p>
             </div>
           </details>
         </div>
@@ -590,15 +590,15 @@
           <div class="download-badge">开源免费 · 纯净无广告</div>
           <h2 class="download-title">下载拾卷</h2>
           <p class="download-desc">
-            最新版本 <strong>拾卷 v2.30 (Build 50)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
+            最新版本 <strong>拾卷 v2.31 (Build 51)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
           </p>
 
           <div class="download-buttons">
-            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.30/Shijuan-v2.30.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.30.apk">
+            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.31/Shijuan-v2.31.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.31.apk">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载安装包 APK (Shijuan-v2.30.apk)
+              下载安装包 APK (Shijuan-v2.31.apk)
             </a>
             <a href="https://github.com/stormsnow2233/slim/releases" target="_blank" rel="noopener" class="btn btn-secondary btn-xl">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -617,7 +617,7 @@
               </div>
               <div class="meta-row">
                 <span class="meta-label">版本号:</span>
-                <span>v2.30 (Build 50)</span>
+                <span>v2.31 (Build 51)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">文件大小:</span>
@@ -637,23 +637,23 @@
               </div>
               <div class="hash-container">
                 <span class="meta-label">SHA-256:</span>
-                <span class="hash-code">e443883695954e9e96589883e1ef5b2570d3bbe2853df2d610f5da73f9598f8b</span>
+                <span class="hash-code">e8f329aaf8b919ad8e412069e05c5785716c2fab54a8a031fa9cb44149aa5b8a</span>
                 <button class="copy-btn" type="button" aria-label="复制 SHA-256 校验和">复制哈希</button>
               </div>
             </div>
 
-            <!-- v2.30 近期更新亮点 -->
+            <!-- v2.31 近期更新亮点 -->
             <div class="changelog-box">
               <div class="changelog-title">
-                <span class="changelog-tag">v2.30 最新版本</span>
-                <span class="changelog-date">2026-11 轻小说文库全量索引引擎、轻小说百科与日轻专区全面升级</span>
+                <span class="changelog-tag">v2.31 最新版本</span>
+                <span class="changelog-date">2026-11 本地书籍/漫画导入功能、全新综合书架架构与漫画阅读器全面升级</span>
               </div>
               <ul class="changelog-list">
-                <li><strong>轻小说文库（Wenku8）全量离线索引引擎：</strong> 内置全站从建站至今 4,379 部出版日轻全量索引数据库（仅 113KB，毫秒级解压匹配）。彻底突破源站强加的 302 登录重定向与 5 秒限频封锁，免登录直连正文、目录与插图。</li>
-                <li><strong>新增轻小说百科源（LNovel）：</strong> 接入全量同步动漫之家轻小说数据库的轻小说百科源（<code>lnovel.org</code> / <code>lnovel.tw</code>），正版日本轻小说文库版与高清原版插画免登录全通。</li>
-                <li><strong>日轻 Web 汉化社区与国轻体验优化：</strong> 针对 <code>ESJ Zone</code> 优化短篇生肉汉化与首发章节正文提取，接入备用镜像 <code>esjzone.cc</code> 并支持智能下架识别；优化 <code>SF 轻小说</code> 人设与插图纯图片章节过滤及 VIP 章节识别。</li>
-                <li><strong>书源结构去重降噪：</strong> 弱化同质化网文爽文，将二次元日轻、Web 汉化、同人轻小说与高质量出版综合书源重组为清晰的核心书库。</li>
-                <li><strong>侧边栏与交互体验精简：</strong> 移除侧边栏与设置页重复的冗余入口，纯粹聚焦核心阅读与模式切换。</li>
+                <li><strong>本地多格式一键导入（TXT / EPUB / PDF）：</strong> 支持直接导入本地电子书与漫画。TXT 智能检测编码与正则分卷；EPUB 自动解析双层目录并原生支持图文插画混排；PDF 高清逐页转码；纯图与文字智能分类，未识别格式弹出确认框由用户指定。</li>
+                <li><strong>全新综合书架架构：</strong> App 启动默认进入综合书架，上半部分展示小说书架（含找小说快捷入口），下半部分展示漫画书架（含看漫画快捷入口），右下角常驻高对比度「+ 导入书籍」悬浮按钮。</li>
+                <li><strong>专区聚焦与移除冗余：</strong> 移除小说与漫画专区内部重复的书架 Tab，使专区专注于探索找书与榜单；彻底移除漫画专区顶部源筛选标签栏，专注纯净看漫。</li>
+                <li><strong>漫画阅读器体验修复：</strong> 彻底解决换章节时跨章翻页直接跳至最后一页的 Bug，重置为第 1 页开篇；进度条拖动跳页更平滑；增加网络失败自动重试 2 次机制自愈偶发超时。</li>
+                <li><strong>侧边栏与设置项收敛：</strong> 侧边栏清理与设置重复的书源管理与网络入口，体验更轻盈流畅。</li>
               </ul>
             </div>
           </div>
@@ -667,7 +667,7 @@
     <div class="liquid-capsule">
       <div class="capsule-info">
         <span class="capsule-title">拾卷 Shijuan</span>
-        <span class="capsule-sub">v2.30 最新版 · 纯原生阅读</span>
+        <span class="capsule-sub">v2.31 最新版 · 纯原生阅读</span>
       </div>
       <a href="#download" class="btn btn-primary btn-sm">立即下载</a>
     </div>

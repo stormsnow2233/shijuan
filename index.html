@@ -78,7 +78,7 @@
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载 APK (v2.26)
+              下载 APK (v2.27)
             </a>
             <a href="https://github.com/stormsnow2233/slim" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -580,15 +580,15 @@
           <div class="download-badge">开源免费 · 纯净无广告</div>
           <h2 class="download-title">下载拾卷</h2>
           <p class="download-desc">
-            最新版本 <strong>拾卷 v2.26 (Build 46)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
+            最新版本 <strong>拾卷 v2.27 (Build 47)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
           </p>
 
           <div class="download-buttons">
-            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.26/Shijuan-v2.26.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.26.apk">
+            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.27/Shijuan-v2.27.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.27.apk">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载安装包 APK (Shijuan-v2.26.apk)
+              下载安装包 APK (Shijuan-v2.27.apk)
             </a>
             <a href="https://github.com/stormsnow2233/slim/releases" target="_blank" rel="noopener" class="btn btn-secondary btn-xl">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -607,7 +607,7 @@
               </div>
               <div class="meta-row">
                 <span class="meta-label">版本号:</span>
-                <span>v2.26 (Build 46)</span>
+                <span>v2.27 (Build 47)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">文件大小:</span>
@@ -627,23 +627,23 @@
               </div>
               <div class="hash-container">
                 <span class="meta-label">SHA-256:</span>
-                <span class="hash-code">3f43446c1fa041f723592bdb218c068b6c3e53e1224ff3d4093bd0597c07a5f1</span>
+                <span class="hash-code">ef0c6f8a5c2f4267c9709ed3f398e219e6cb29d7a43e2b86649f6505485178c1</span>
                 <button class="copy-btn" type="button" aria-label="复制 SHA-256 校验和">复制哈希</button>
               </div>
             </div>
 
-            <!-- v2.26 近期更新亮点 -->
+            <!-- v2.27 近期更新亮点 -->
             <div class="changelog-box">
               <div class="changelog-title">
-                <span class="changelog-tag">v2.26 最新版本</span>
-                <span class="changelog-date">2026-11 核心网络引擎与正文缓存重构</span>
+                <span class="changelog-tag">v2.27 最新版本</span>
+                <span class="changelog-date">2026-11 轻小说文库搜索重构与通道优化</span>
               </div>
               <ul class="changelog-list">
-                <li><strong>P0 安全加固与凭据硬件加密：</strong> 彻底消除轻小说文库硬编码账号、密码与共享 Cookie 隐患，新建 <code>SecureStore</code> 基于 Android Keystore 硬件密钥实现 AES-GCM-256 加密隔离；精准识别 Cloudflare 浏览器质询与会话失效，杜绝 403 自动恶性死循环。</li>
-                <li><strong>核心网络引擎重构与底层请求取消：</strong> 支持 OkHttp <code>Call.cancel()</code> 与后台线程池任务级底层联动取消；多镜像遍历共享单源统一 Deadline 预算（常规源 12s / SF 慢源 20s），超时提前退出；建立搜索、正文与预取三级有界独立线程池隔离调度；引入 <code>DomainRateLimiter</code> 统一 Token Bucket 令牌桶平滑限流。</li>
-                <li><strong>小说目录多页自动提取与正文两级缓存（L1+L2）：</strong> <code>TocRule</code> 支持 <code>nextPage</code> 选择器与 <code>{page}</code> 模板多页自动提取（最多 50 页防环去重）；构建内存 LRU（50章）+ 磁盘文件（24h TTL、150MB 上限超额淘汰至 120MB）两级缓存体系，严格校验内容合法性，杜绝转码错误与伪正文入库。</li>
-                <li><strong>书源健康度与历史指标体系升级：</strong> 记录请求总数、成功率（细分搜索/目录/正文）与状态码，统一 1m/5m/30m/2h/24h 指数退避降权阶梯；重做书源探针机制，深入抽查目录与多章节正文，书源管理界面直观展示历史成功率与健康状态。</li>
-                <li><strong>自定义书源订阅防护与漫画优化：</strong> 自定义书源全字段 JSON 无损往返序列化；支持在线书源订阅导入与恶意脚本注入防护；漫画多源搜索共享 8 秒总 Deadline，结果按书名、作者与路径复合 Key 精确去重。</li>
+                <li><strong>轻小说文库（Wenku8）核心搜索与抓取通道深度重构：</strong> 全面适配现行可用 GET 搜索端点 <code>/modules/article/search.php?searchkey={key}&searchtype=articlename</code>（GBK 编码）；保留 <code>/so.php</code> 备用回退；配置 Chrome 140 独立桌面请求环境与 Referer 伪装。</li>
+                <li><strong>未登录与 5 秒限频精准拦截：</strong> 精准拦截文库未登录 302 重定向至 <code>login.php</code> 与未登录提示，归类为 <code>NEEDS_LOGIN</code>，搜索失败卡片与书源列表一键呼出内置 WebView 快速登录并自动双向同步全镜像 Cookie；精准拦截 5 秒限频错误并归类为 <code>ACCESS_RESTRICTED</code>（HTTP 429）。</li>
+                <li><strong>双重正则提取兜底与非书籍条目去重：</strong> 引入抗变性更强的正则解析链路，彻底过滤「我要阅读」「放入书架」等伪书名干扰；自动根据书籍 aid 计算高清封面 URL 并进行书籍去重。</li>
+                <li><strong>CDN 静态资源 HTTPS 协议升级与广告剔除：</strong> 对 <code>img.wenku8.com</code>、<code>pic.777743.xyz</code>、<code>pic.wenku8.cn</code> 等文库图片域名全面升级为 <code>https://</code>，解决 Android 系统明文 HTTP 拦截；正文与阅读器彻底剔除 <code>ul#contentdp</code> 首尾广告行，完善版权下架识别。</li>
+                <li><strong>全镜像令牌桶限频平滑调度：</strong> <code>DomainRateLimiter</code> 将 <code>wenku8.cc</code>、<code>wenku8.net</code>、<code>wenku8.com</code> 以及 <code>wap.wenku8.cc</code> 全部纳入 5 秒每令牌的统一平滑控制，杜绝并发轰炸导致封禁。</li>
               </ul>
             </div>
           </div>
@@ -657,7 +657,7 @@
     <div class="liquid-capsule">
       <div class="capsule-info">
         <span class="capsule-title">拾卷 Shijuan</span>
-        <span class="capsule-sub">v2.26 最新版 · 纯原生阅读</span>
+        <span class="capsule-sub">v2.27 最新版 · 纯原生阅读</span>
       </div>
       <a href="#download" class="btn btn-primary btn-sm">立即下载</a>
     </div>

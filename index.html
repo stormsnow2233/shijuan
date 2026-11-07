@@ -78,7 +78,7 @@
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载 APK (v2.28)
+              下载 APK (v2.29)
             </a>
             <a href="https://github.com/stormsnow2233/slim" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -88,7 +88,7 @@
             </a>
           </div>
           <div class="hero-specs">
-            <span class="spec-item"><span class="check">✓</span> 18+ 内置书源</span>
+            <span class="spec-item"><span class="check">✓</span> 精选高可用书源</span>
             <span class="spec-item"><span class="check">✓</span> 纯原生不闪退</span>
             <span class="spec-item"><span class="check">✓</span> 零广告完全免费</span>
             <span class="spec-item"><span class="check">✓</span> Android 7.0+</span>
@@ -510,63 +510,73 @@
       </div>
     </section>
 
-    <!-- 4. 常见问题 (FAQ & Guide) -->
+    <!-- 4. 常见问题 (FAQ) -->
     <section class="faq-section" id="faq">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">解惑答疑</span>
-          <h2 class="section-title">大家经常问的问题</h2>
-          <p class="section-desc">关于软件来源、书源连通、排版体验与导出的真实解答</p>
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">常见问题解答</h2>
+          <p class="section-desc">关于书源、排版体验、网络代理与使用技巧的常见疑问</p>
         </div>
 
         <div class="faq-container">
           <details class="faq-item" name="faq" open>
             <summary class="faq-question">
-              <span>1. 这个软件和老版的轻小说文库 App 是什么关系？</span>
+              <span>1. 和原来的轻小说文库（Wenku8）App 有什么关系？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>我们自己就是轻小说文库的老读者。老版文库官方客户端界面朴素、护眼绿看书极舒服，但多年未更新，新系统经常闪退或图裂。拾卷保留了大家最喜欢的绿色经典基调与纯粹无广告的体验，用现代安卓原生代码彻底重写，修复了老系统的兼容问题，并且加入了多书源聚合、整本 EPUB 导出和漫画功能。</p>
+              <p>官方旧版文库 App 多年未维护，在新系统上闪退断网较多。拾卷最初是由文库老读者用现代安卓原生技术重写的开源客户端，保留了大家习惯的绿色护眼主题，同时扩展了 ESJ Zone、SF 轻小说、飞卢等多书源聚合搜索，并补齐了日轻插图混排与整本离线导出。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>2. 为什么有的书源搜不出东西或者连不上？怎么配代理？</span>
+              <span>2. 遇到部分书源搜不到书或连不上怎么办？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>有些小说站有防爬防火墙，或者部分漫画源需要特殊网络。拾卷已经伪装了浏览器请求头；如果你手机里开着 Clash 等代理软件，直接在拾卷侧边栏「网络」点一下「127.0.0.1:7890」预设填空就能连上，不用重新启动软件。</p>
+              <p>可以在「设置 -> 书源管理」里查看各书源的实时连通状态与成功率。如果遇到部分海外站点或漫画源连接超时，在「设置 -> 网络设置」里填入本机代理地址（如 <code>127.0.0.1:7890</code>）即可直连，也支持直接导入阅读（Legado）格式的自定义书源规则。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>3. 为什么坚持做纯原生排版，不用网页套壳（WebView）？</span>
+              <span>3. 为什么做原生排版，不用网页套壳（WebView）？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>很多阅读器直接拿网页或者 WebView 套壳做翻页，经常出现翻页掉帧、切章闪白、长篇小说看着看着手机发烫甚至闪退。拾卷用安卓原生的文字渲染引擎逐行算好分页，左右翻页像翻真书一样干脆跟手，连续看几小时也不会卡顿发热。</p>
+              <p>很多阅读器直接拿网页套壳做翻页，几十万字的长篇很容易掉帧发热甚至被系统杀后台。拾卷采用安卓原生的文字渲染引擎逐行算好分页，翻页干脆跟手，支持左右滑动、垂直滚动、双击自动切章与音量键翻页，长时间看书更省电流畅。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>4. 导出来的 EPUB 电子书，可以直接传到 Kindle 或微信读书上看吗？</span>
+              <span>4. 导出的 EPUB 可以在微信读书、Kindle 等设备上看吗？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>可以。拾卷导出的 EPUB 文件完全遵守标准电子书规范，自带封面、简介、卷级和章节双层目录，内嵌了舒服的宋体排版。无论你发给微信读书、导入苹果图书，还是拷进 Kindle、文石等电纸书，都不会遇到乱码或者目录丢失。</p>
+              <p>可以。拾卷导出的 EPUB 文件遵循标准规范，自动打包高清封面、简介、分卷及章节双层目录与日轻插图。导出后可直接分享至微信读书、Apple Books，或通过 USB 与邮件传给 Kindle、文石等各类墨水屏电纸书设备。</p>
             </div>
           </details>
 
           <details class="faq-item" name="faq">
             <summary class="faq-question">
-              <span>5. 断网或者坐飞机时怎么用？缓存占地方吗？</span>
+              <span>5. 怎么离线看书？缓存会一直占手机空间吗？</span>
               <span class="faq-chevron" aria-hidden="true"></span>
             </summary>
             <div class="faq-answer">
-              <p>只要在有网时打开看过的章节或者点了整本下载，内容就全在本机了。断网时软件会自动进入离线模式，只展示已存好的书，没有转圈等待。侧边栏还可以随时查看缓存大小，能一键清理不看的章节，绝不偷偷霸占手机空间。</p>
+              <p>看过的章节或在书籍详情页点击「整本下载」后，内容都会保存在本地，断网或飞行模式下可直接阅读。应用内置了内存与磁盘两级 LRU 淘汰机制，也可以随时在「设置 -> 缓存管理」中查看占用并一键清理，不会产生残留垃圾。</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-question">
+              <span>6. 漫画模式怎么开启？</span>
+              <span class="faq-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>点击左上角图标展开侧边栏，顶部第一项就是「小说模式 / 漫画模式」一键切换按钮。漫画阅读器支持双击缩放、横竖屏自适应、页码进度拖动与跨章节连续浏览。</p>
             </div>
           </details>
         </div>
@@ -580,15 +590,15 @@
           <div class="download-badge">开源免费 · 纯净无广告</div>
           <h2 class="download-title">下载拾卷</h2>
           <p class="download-desc">
-            最新版本 <strong>拾卷 v2.28 (Build 48)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
+            最新版本 <strong>拾卷 v2.29 (Build 49)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
           </p>
 
           <div class="download-buttons">
-            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.28/Shijuan-v2.28.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.28.apk">
+            <a href="https://github.com/stormsnow2233/slim/releases/download/v2.29/Shijuan-v2.29.apk" class="btn btn-primary btn-xl" download="Shijuan-v2.29.apk">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载安装包 APK (Shijuan-v2.28.apk)
+              下载安装包 APK (Shijuan-v2.29.apk)
             </a>
             <a href="https://github.com/stormsnow2233/slim/releases" target="_blank" rel="noopener" class="btn btn-secondary btn-xl">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -607,7 +617,7 @@
               </div>
               <div class="meta-row">
                 <span class="meta-label">版本号:</span>
-                <span>v2.28 (Build 48)</span>
+                <span>v2.29 (Build 49)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">文件大小:</span>
@@ -627,23 +637,22 @@
               </div>
               <div class="hash-container">
                 <span class="meta-label">SHA-256:</span>
-                <span class="hash-code">b70dcee91b350d3432e8997d421abc082920f1fc123c88cbbae1401840e0b944</span>
+                <span class="hash-code">2b7153100ea277e457fc8a6f389d7e4c0cba8c1ec340925ef5d738cf00c330a1</span>
                 <button class="copy-btn" type="button" aria-label="复制 SHA-256 校验和">复制哈希</button>
               </div>
             </div>
 
-            <!-- v2.28 近期更新亮点 -->
+            <!-- v2.29 近期更新亮点 -->
             <div class="changelog-box">
               <div class="changelog-title">
-                <span class="changelog-tag">v2.28 最新版本</span>
-                <span class="changelog-date">2026-11 漫画阅读器进度记忆、翻页交互重构与小说书源深度优化</span>
+                <span class="changelog-tag">v2.29 最新版本</span>
+                <span class="changelog-date">2026-11 侧边栏导航精简、接入 GitHub 开源书源与预置书源大清洗</span>
               </div>
               <ul class="changelog-list">
-                <li><strong>漫画阅读器进度记忆与快速跳转：</strong> 历史阅读记录新增 <code>pageIndex</code> 精确页码存储，重开漫画无缝续读；底部控制栏新增拖动滑块（<code>Slider</code>）与当前页/总页数直观指示，支持快速定位翻页。</li>
-                <li><strong>漫画跨章节翻页越界跳末尾 Bug 修复：</strong> 彻底修复漫画在末页向右点击翻页时意外跳入下一话最后一页的缺陷；翻页至下一话自动精准重置滚动到第 1 页，翻页上一话精准重置定位至末页。</li>
-                <li><strong>漫画首次加载弱网抖动重试：</strong> 优化 <code>ComicRepo.pages()</code> 解析链路，加入自动重试与指数退避，避免瞬时网络波动导致首次打开白屏重试；移除搜索页顶部冗余的书源选择组件。</li>
-                <li><strong>小说搜索导航返回栈修复：</strong> 从搜索结果点击小说进入书籍详情和阅读器后，点击返回键将平滑返回搜索结果列表，完整保留关键词、结果卡片和浏览滚动位置，不再直接退出至书架。</li>
-                <li><strong>SF 轻小说（SFACG）规则强化与飞卢小说（Faloo）新源接入：</strong> 完善 SF 卷名过滤与短篇正文规则；新增飞卢同人与轻小说库书源；彻底清理停运及不可达的失效书源，显著降低全源搜索时延。</li>
+                <li><strong>侧边栏抽屉精简：</strong> 移除了抽屉中与设置页重复的「书源管理」和「网络」入口，保持左侧栏纯粹干练，专注模式切换、缓存与核心设置。</li>
+                <li><strong>接入 GitHub 开源阅读书源（ESJ Zone 与书趣阁）：</strong> 接入知名日轻生肉翻译平台 <code>ESJ Zone</code>（支持标签检索、分卷目录与论坛正文提取）与老牌长效综合书源 <code>书趣阁</code>（毫秒级检索、完整目录解析）；扩充笔趣书阁备用镜像池（<code>biquge.site</code>、<code>biqun.cc</code>）。</li>
+                <li><strong>预置书源大清洗与死链剔除：</strong> 彻底剔除网关超时 504 的笔趣阁5200、403/404的铅笔与哔哩轻小说、连接超时的顶点小说与 Z-Library 等失效备用源；清理文库与 ESJ 的死链镜像。</li>
+                <li><strong>预置全量源 100% 实测连通保证：</strong> 保留的 8 大预置源（笔趣阁、速读谷、书趣阁、17K、文库、SF、飞卢、ESJ Zone）全部经过端到端链路自动化测试验证通过。</li>
               </ul>
             </div>
           </div>
@@ -657,7 +666,7 @@
     <div class="liquid-capsule">
       <div class="capsule-info">
         <span class="capsule-title">拾卷 Shijuan</span>
-        <span class="capsule-sub">v2.28 最新版 · 纯原生阅读</span>
+        <span class="capsule-sub">v2.29 最新版 · 纯原生阅读</span>
       </div>
       <a href="#download" class="btn btn-primary btn-sm">立即下载</a>
     </div>

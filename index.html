@@ -78,7 +78,7 @@
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载 APK (v3.08)
+              下载 APK (v3.09)
             </a>
             <a href="https://github.com/stormsnow2233/slim" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -590,15 +590,15 @@
           <div class="download-badge">开源免费 · 纯净无广告</div>
           <h2 class="download-title">下载拾卷</h2>
           <p class="download-desc">
-            最新版本 <strong>拾卷 v3.08 (Build 72)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
+            最新版本 <strong>拾卷 v3.09 (Build 73)</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。
           </p>
 
           <div class="download-buttons">
-            <a href="https://github.com/stormsnow2233/slim/releases/download/v3.08/Shijuan-v3.08.apk" class="btn btn-primary btn-xl" download="Shijuan-v3.08.apk">
+            <a href="https://github.com/stormsnow2233/slim/releases/download/v3.09/Shijuan-v3.09.apk" class="btn btn-primary btn-xl" download="Shijuan-v3.09.apk">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
               </svg>
-              下载安装包 APK (Shijuan-v3.08.apk)
+              下载安装包 APK (Shijuan-v3.09.apk)
             </a>
             <a href="https://github.com/stormsnow2233/slim/releases" target="_blank" rel="noopener" class="btn btn-secondary btn-xl">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -617,7 +617,7 @@
               </div>
               <div class="meta-row">
                 <span class="meta-label">版本号:</span>
-                <span>v3.08 (Build 72)</span>
+                <span>v3.09 (Build 73)</span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">文件大小:</span>
@@ -637,21 +637,22 @@
               </div>
               <div class="hash-container">
                 <span class="meta-label">SHA-256:</span>
-                <span class="hash-code">8f016c29c621a2d68cdc88cfc3d13ccfebf9a57cc0ed87678fa0e9f23bf60109</span>
+                <span class="hash-code">d85b71983023f61f19ba0508c8c082521321180fa3cb838accff85ba7c6d1090</span>
                 <button class="copy-btn" type="button" aria-label="复制 SHA-256 校验和">复制哈希</button>
               </div>
             </div>
 
-            <!-- v3.08 近期更新亮点 -->
+            <!-- v3.09 近期更新亮点 -->
             <div class="changelog-box">
               <div class="changelog-title">
-                <span class="changelog-tag">v3.08 智能域名分流升级 · 国内源直连毫秒秒开 · 境外漫画CDN与JM专线优选加速</span>
-                <span class="changelog-date">2026-11 智能域名分流 (Smart Routing) · 国内纯小说源直接直连（免人机盾拦截）· 境外受阻漫画图片与JM专线走官方优选代理</span>
+                <span class="changelog-tag">v3.09 阅读器滑动性能跃升 · 进度单记录瘦身防串 · 网络设置界面自然人话</span>
+                <span class="changelog-date">2026-11 阅读器滚动 debounce 节流写盘 · 异步 IO 彻底消除卡顿 · 每书一条进度记录与 SHA-256 唯一防碰撞 · 网络设置文案去 AI 化</span>
               </div>
               <ul class="changelog-list">
-                <li><strong>国内纯小说源直连免盾（Bypass Domestic）：</strong> 针对大陆服务器及套有 Cloudflare 防护的小说站点（笔趣阁、无限轻小说、轻小说文库直连、SF轻小说等），开启官方代理时自动执行智能裸连直连，毫秒级极速响应，彻底告别海外机房出口导致的 GFW 握手超时与 Cloudflare 403 人机盾质询拦截。</li>
-                <li><strong>境外受限漫画/图片/JM 走官方优选代理：</strong> 针对国内经常被阻断或握手失败的海外漫画图片 CDN（极速漫画/包子漫画 <code>*.bzcdn.net</code>、漫画人 <code>*.hamreus.com</code>、JMcomic 官方专线等），自动无缝命中走官方云端优选加速通道，封面与章节秒级上屏！</li>
-                <li><strong>网络体检覆盖全面：</strong> 体检诊断全面覆盖轻小说文库、极速漫画海外图片 CDN、漫画人图片 CDN、漫画柜、笔趣阁、无限轻小说与 SF 轻小说，直观展示智能分流在各项服务下的毫秒级连通时延。</li>
+                <li><strong>消灭滑动卡顿与频繁写盘：</strong> 阅读器滚动改用 <code>snapshotFlow</code> + <code>debounce(500ms)</code> 节流，仅在手指停下滑动后才写入持久化；全量写盘操作抛入后台 IO 线程（<code>Dispatchers.IO</code>），大幅消除快速 fling 滚动时的掉帧卡顿，退出与切章即时保存绝不丢进度。</li>
+                <li><strong>每书单条记录与 SHA-256 防串书：</strong> 彻底重构进度存储机制，告别每章一个键的历史设计，整本书仅保留一条当前章节与章内进度，长篇读完本地数据绝不臃肿；采用 <code>SHA-256(bookUrl)</code> 独立哈希，数学级杜绝两本书同章 hash 碰撞串书；启动后台自动扫描清理遗留孤儿键，给本地数据深度瘦身。</li>
+                <li><strong>网络设置界面全面自然人话：</strong> 彻底去除技术大词与生硬术语，改用平实亲切的人话说明；直观标明“漫画封面或图片打不开时开代理，平时看书直连就行”，分流让路状态一目了然。</li>
+                <li><strong>智能域名分流与官方优选加速：</strong> 国内纯小说源直接裸连直连（免 Cloudflare 人机盾拦截），境外受阻漫画图片 CDN 与 JM 专线自动命中官方云端优选通道。</li>
               </ul>
             </div>
           </div>
@@ -665,7 +666,7 @@
     <div class="liquid-capsule">
       <div class="capsule-info">
         <span class="capsule-title">拾卷 Shijuan</span>
-        <span class="capsule-sub">v3.08 最新版 · 纯原生阅读</span>
+        <span class="capsule-sub">v3.09 最新版 · 纯原生阅读</span>
       </div>
       <a href="#download" class="btn btn-primary btn-sm">立即下载</a>
     </div>

@@ -755,4 +755,131 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 600);
     });
   });
+
+  // ── 18. 自动识别 GitHub 最新 Release 与更新日志 (Auto Sync Latest Release) ──
+  async function syncLatestRelease() {
+    const repo = 'stormsnow2233/slim';
+    const apiUrl = `https://api.github.com/repos/${repo}/releases/latest`;
+    try {
+      const resp = await fetch(apiUrl, {
+        headers: { 'Accept': 'application/vnd.github.v3+json' }
+      });
+      if (!resp.ok) return;
+      const rel = await resp.json();
+      if (!rel || !rel.tag_name) return;
+
+      const tag = rel.tag_name;
+      const title = rel.name || tag;
+      const pubDate = rel.published_at ? rel.published_at.substring(0, 10) : '';
+      const body = rel.body || '';
+
+      // 寻找 apk 资产
+      const apk = (rel.assets || []).find(a => a.name && a.name.endsWith('.apk'));
+      const apkUrl = apk ? apk.browser_download_url : `https://github.com/${repo}/releases/download/${tag}/Shijuan-${tag}.apk`;
+      const apkName = apk ? apk.name : `Shijuan-${tag}.apk`;
+      const apkSizeMb = apk && apk.size ? (apk.size / (1024 * 1024)).toFixed(1) : null;
+
+      // 提取 Build 号
+      const buildMatch = body.match(/Build\s*(\d+)/i) || title.match(/Build\s*(\d+)/i);
+      const buildStr = buildMatch ? ` (Build ${buildMatch[1]})` : '';
+
+      // 提取 SHA-256
+      const shaMatch = body.match(/([a-f0-9]{64})/i);
+      const sha256 = shaMatch ? shaMatch[1].toLowerCase() : null;
+
+      // 1. 更新 Hero 区域主按钮
+      const heroDl = document.querySelector('.hero-actions a.btn-primary');
+      if (heroDl) {
+        const svg = heroDl.querySelector('svg');
+        heroDl.innerHTML = '';
+        if (svg) heroDl.appendChild(svg);
+        heroDl.appendChild(document.createTextNode(` 下载 APK (${tag})`));
+      }
+
+      // 2. 更新下载板块主下载按钮
+      const dlBtn = document.querySelector('.download-buttons a.btn-primary');
+      if (dlBtn) {
+        dlBtn.href = apkUrl;
+        dlBtn.setAttribute('download', apkName);
+        const svg = dlBtn.querySelector('svg');
+        dlBtn.innerHTML = '';
+        if (svg) dlBtn.appendChild(svg);
+        dlBtn.appendChild(document.createTextNode(` 下载安装包 APK (${apkName})`));
+      }
+
+      // 3. 更新下载说明段落
+      const dlDesc = document.querySelector('.download-desc');
+      if (dlDesc) {
+        dlDesc.innerHTML = `最新版本 <strong>拾卷 ${tag}${buildStr}</strong>。支持 Android 7.0 及以上系统，适配手机、折叠屏与平板设备。`;
+      }
+
+      // 4. 更新元数据表格 (版本号、文件大小、SHA-256)
+      const rows = document.querySelectorAll('.download-meta-box .meta-row');
+      rows.forEach(r => {
+        const lbl = r.querySelector('.meta-label')?.textContent || '';
+        if (lbl.includes('版本号')) {
+          const val = r.querySelector('span:not(.meta-label)');
+          if (val) val.textContent = `${tag}${buildStr}`;
+        } else if (lbl.includes('文件大小') && apkSizeMb) {
+          const val = r.querySelector('span:not(.meta-label)');
+          if (val) val.textContent = `约 ${apkSizeMb} MB`;
+        }
+      });
+
+      if (sha256) {
+        const hashEl = document.querySelector('.download-meta-box .hash-code');
+        if (hashEl) hashEl.textContent = sha256;
+      }
+
+      // 5. 更新吸底胶囊
+      const capSub = document.querySelector('.capsule-sub');
+      if (capSub) {
+        capSub.textContent = `${tag} 最新版 · 纯原生阅读`;
+      }
+
+      // 6. 自动解析与渲染更新日志 (Changelog Box)
+      if (body) {
+        renderChangelogFromRelease(tag, title, pubDate, body);
+      }
+    } catch (e) {
+      console.warn('[Shijuan] Auto release sync skipped:', e);
+    }
+  }
+
+  function renderChangelogFromRelease(tag, title, pubDate, rawBody) {
+    const box = document.querySelector('.changelog-box');
+    if (!box) return;
+
+    const cleanTitle = title.replace(/^v?\d+(\.\d+)*\s*[-–—·:]?\s*/i, '').trim();
+
+    const lines = rawBody.split('\n');
+    const items = [];
+    for (let line of lines) {
+      const s = line.trim();
+      if (s.startsWith('- ') || s.startsWith('* ')) {
+        let content = s.substring(2).trim();
+        if (content.includes('安装包') || content.includes('SHA-256') || content.includes('文件大小') || content.includes('签名状态')) {
+          continue;
+        }
+        content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        content = content.replace(/`([^`]+)`/g, '<code>$1</code>');
+        items.push(`<li>${content}</li>`);
+      }
+    }
+
+    if (items.length > 0) {
+      box.innerHTML = `
+        <div class="changelog-title">
+          <span class="changelog-tag">${tag} ${cleanTitle || '最新版本'}</span>
+          <span class="changelog-date">${pubDate || '最新发布'} · GitHub 官方 Release 自动同步</span>
+        </div>
+        <ul class="changelog-list">
+          ${items.join('\n          ')}
+        </ul>
+      `;
+    }
+  }
+
+  // 自动同步 GitHub 最新 Release
+  syncLatestRelease();
 });
